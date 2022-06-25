@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>\<!--google adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1116219889806432"
+     crossorigin="anonymous"></script>
+
+    
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Fantasy Draft Lottery - Random and Weighted Draft Lottery Simulator for All Fantasy Sports Leagues - NBA, NFL, MLB, NHL</title>
+
+    <link rel="icon" href="https://img.icons8.com/offices/30/000000/trophy.png">
+    <link rel="stylesheet" type="text/css" href="style.css?version=11">
+    <script data-ad-client="ca-pub-1116219889806432" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  <body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Fantasy Draft Lottery</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+          	<a class="nav-link" href="About.html">About</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>-->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center topHeader">
+        <h1 class="mt-5">Fantasy Draft Random Order Generator</h1>
+        <p class="lead">Random draft lottery simulator, with an option for weighted lotteries, where each team gets a specific amount of lottery balls.</p>
+        <p style="font-style: italic;" class="lead"> Free, simple, and just works.</p>
+
+      </div>
+    </div>
+
+    <form autocomplete="on">
+      <div class="form-group">
+        <label>League Name:</label>
+        <input type="text" class="form-control" id="league_name" name="leagueName" onclick="this.setSelectionRange(0, this.value.length)" value="My League">
+      </div>
+      <div class="col-lg-12 form-group">
+        <p>Number of Teams:
+          <select class="form-control numberOfTeams" id="numberOfTeams">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option> 
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10" selected="selected">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+          </select>
+        </p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" >
+          <label class="form-check-label" for="inlineCheckbox1"><u>Weighted</u>: You choose how many balls each team will receive in the lottery</label>
+        </div>
+        
+
+      </div>
+      
+    
+
+    <div id="teamNames" class="row">
+      <!-- Team Names Go Here -->
+    </div>
+    </form> 
+    <button type="submit" class="btn btn-primary generateOrder" id="submit">Generate Order</button>
+    <!--<div class="addthis_inline_share_toolbox"></div>-->
+
+    <!--yahoo ad-->
+    <div id="332833751">
+    <script type="text/javascript">
+        try {
+            window._mNHandle.queue.push(function (){
+                window._mNDetails.loadTag("332833751", "728x90", "332833751");
+            });
+        }
+        catch (error) {}
+    </script>
+    </div>
+
+    <!--yahoo ad-->
+
+
+    <img src="https://imgur.com/MMhHAcB.gif" id="lotteryPic" alt="Fantasy Draft Lottery Generator Random Balls">
+
+    <hr>
+
+
+    <div class="col-lg-12">
+    	<h1 class="my-4">How To
+    	</h1>
+
+    	<p>
+    		Start by choosing your league name and entering it in the "League Name" section. Then select the number of teams or entries in your league or pool. Once you have done this, decide whether this simulator will be weighted. With the weighted option, you can select the number of chances (or lottery balls) that each team/entry will get. It's similar to the NBA draft, where some teams have a higher chance of getting the number one pick overall. After you make this decision, enter the league's team names along with their weight (if you enabled this option) for a smooth simulation experience. Our custom-built algorithm is purely random and unbiased, ensuring a transparent and fair process. After filling out all fields, click Generate Order, and enjoy the results! The results page has NFL and NBA music built in to make your order reveal that much more exhilarating. Good Luck!
+    	</p>
+
+    	<p>By, <a href="/">The FDL Team</a></p>
+
+
+    </div>
+
+	<hr>
+
+    <div class="col-md-8">
+
+      
+
+      <h1 class="my-4">The Blog
+          <!--<small>Fantasy Draft Lottery</small>-->
+      </h1>
+
+      <!-- Blog Post -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Why Fantasy Football?</h2>
+          <p class="card-text">The thrill and benefits of investing in a fantasy football league</p>
+          <a href="blogPosts/post1.html" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on August 10, 2020 by
+          <a href="/">FDL Team</a>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Understanding Fantasy Basketball</h2>
+          <p class="card-text">As with all fantasy sports, league format can alter which players are most valuable. Fantasy basketball is typically scored in several different ways. Every fantasy platform has a different set of rules to leverage</p>
+          <a href="blogPosts/post2.html" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on February 4, 2020 by
+          <a href="/">FDL Team</a>
+        </div>
+      </div>
+  	
+
+  	<div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Understanding Rankings and Projections</h2>
+          <p class="card-text">During both your fantasy draft and the regular season, you will be constantly hit over the head with rankings and projections. With so many sources generating these numbers, they must be useful, right?</p>
+          <a href="blogPosts/post3.html" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on July 1, 2020 by
+          <a href="/">FDL Team</a>
+        </div>
+      </div>
+
+      <div>
+      	<p>Read More at <a href="blog.html"> Blog Posts </a>
+      	</p>
+  	  </div>
+
+    </div>
+
+
+   <hr>
+
+   <div style="text-align: center; margin-bottom: 60px;">
+   	<p>Fantasy Draft Lottery | 2018-2021 | <a href="/">Home</a> | <a href="blog.html">Blog</a></p>
+   </div>	
+
+
+
+
+  </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fbd8530d6c7675d"></script>
+    <script type="text/javascript" src="main.js?version=9"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+	
+ </body>
+</html>
